@@ -1,0 +1,35 @@
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  60% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Apply animations */
+.first-text {
+  animation: fadeInOut 2s ease-in-out forwards; /* Shorter duration */
+}
+
+.name {
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 2s; /* Appears sooner */
+}
+
+.preloader {
+  animation: fadeOut 2s ease-in-out forwards;
+  animation-delay: 2s; /* Ends sooner */
+}
