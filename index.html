@@ -5,68 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyPortfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/taos@1.0.3/dist/taos.js"></script>
     <script src="./js/app.js" defer></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-      <!-- <div id="preloader"
+    <!-- <div id="preloader"
         class="fixed inset-0 bg-black flex flex-col justify-center items-center text-white text-6xl font-bold preloader">
         <span class="first-text">JUNIOR <span class="text-purple-500"> WEBSITE</span> DEVELOPER</span>
         <span class="opacity-0 name">GLORIA LARBI</span>
     </div>  -->
 
-<nav class="flex items-center justify-between px-8 py-6 bg-black text-white border-b border-gray-700">
-    <div class="text-xl font-bold flex items-center px-10">
-        WEB DEVELOPER
-    </div>
+    <nav
+      class="flex items-center justify-between px-8 py-6 bg-black text-white border-b border-gray-700"
+    >
+      <div class="text-xl font-bold flex items-center px-10">WEB DEVELOPER</div>
 
-    <div class= "flex items-center gap-x-13">
+      <div class="flex items-center gap-x-13">
         <a href="#" class="hover:text-orange-500">Home</a>
         <a href="#" class="hover:text-orange-500">About</a>
         <a href="#" class="hover:text-orange-500">Portfolio</a>
         <a href="#" class="hover:text-orange-500">Blog</a>
         <a href="#" class="hover:text-orange-500">Utility Pages</a>
-        <button class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black 
-               before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 
-               before:translate-x-1 before:translate-y-1 before:bg-white 
-               hover:bg-none hover:text-white">
-            Contact Now
+        <button
+          class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:translate-x-1 before:translate-y-1 before:bg-white hover:bg-none hover:text-white"
+        >
+          Contact Now
         </button>
-    </div>
-</nav>
-<section class="bg-black text-white min-h-screen flex items-center justify-center px-10">
-  <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
-    <div class="max-w-lg text-left">
-      <p class="text-lg font-semibold">Gloria's <span class="text-orange-500">CodeNexus</span></p>
-      <h1 id="typing-text" class="text-5xl font-bold mt-2 leading-tight"></h1>
-      <button
-        class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black 
-               before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 
-               before:translate-x-1 before:translate-y-1 before:bg-white 
-               hover:bg-none hover:text-white mt-8 ">
-        Contact Now
-      </button>
-    </div>
-
-    <div class="relative w-full h-[500px] bg-black flex justify-center">
-      <div class="absolute top-6 w-[620px] h-[468px] bg-orange-500 z-0"></div>
-    
-      <img src="./images/1.png" alt="Freelancer" class="relative z-10 w-80 h-[490px] object-cover">
-    
+      </div>
+    </nav>
+    <section
+      class="bg-black text-white min-h-screen flex items-center justify-center px-10"
+    >
       <div
-        class="absolute top-0 left-1 bg-black text-white px-3 py-2 text-lg font-semibold border border-white animate-float">
-        GLORIA LARBI
+        class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10"
+      >
+        <div class="max-w-lg text-left">
+          <p class="text-lg font-semibold">
+            Gloria's <span class="text-orange-500">CodeNexus</span>
+          </p>
+          <h1
+            id="typing-text"
+            class="text-5xl font-bold mt-2 leading-tightmin-h-[80px]">
+          </h1>
+          <button
+            class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:translate-x-1 before:translate-y-1 before:bg-white hover:bg-none hover:text-white mt-8">
+            Contact Now
+          </button>
+        </div>
+        <div class="relative w-full h-[500px] bg-black flex justify-center">
+          <div
+            class="absolute top-6 w-[620px] h-[468px] bg-orange-500 z-0">
+          </div>
+          <img
+            src="./images/1.png"
+            alt="Freelancer"
+            class="relative z-10 w-80 h-[490px] object-cover"/>
+            <div
+            class="absolute top-0 left-1 bg-black text-white px-3 py-2 text-lg font-semibold border border-white animate-float">
+            GLORIA LARBI
+          </div>
+          <div
+            class="absolute bottom-0 right-2 bg-black text-white px-4 py-2 text-lg font-semibold border border-white animate-float">
+            Web Developer
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-10 py-16 duration-[3000ms] ease-[cubic-bezier(.25,.1,.25,1)] taos:opacity-0
+">
+      <!-- Left: Image Section -->
+      <div class="relative">
+        <img src="./images/1.png" alt="Person" class="w-[500px]  h-[600px]">
+        <h2 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-4xl font-bold text-white opacity-80">
+          GLORIA LARBI
+        </h2>
       </div>
     
-      <div
-        class="absolute bottom-0 right-2 bg-black text-white px-4 py-2 text-lg font-semibold border border-white animate-float">
-        Web Developer
+      <!-- Right: Text Section -->
+      <div class="text-left">
+        <h3 class="text-2xl font-semibold">About Me</h3>
+        <h1 class="text-5xl font-bold mt-2 leading-tight">
+          Your trusted <span class="text-orange-500">Web Developer </span>Crafting Seamless Digital Experiences.
+        </h1>
+        <p class="text-gray-600 mt-4">
+          As a Web Developer, I specialize in crafting seamless digital experiences. With a passion for clean code and modern design, I bring ideas to life through intuitive and responsive websites
+        </p>
+        <button class="relative px-6 py-3 mt-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black 
+                before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 
+                before:translate-x-1 before:translate-y-1 before:bg-white 
+                hover:bg-none hover:text-white">
+          Contact Now
+        </button>
+      </div>
+    </section>
+    <section class="bg-black text-white py-16 px-6">
+      <div class="text-center">
+        <p class="text-lg font-semibold text-gray-400">My Services</p>
+        <h2 class="text-4xl font-bold mt-2">
+          Comprehensive Creative <span class="bg-orange-500 text-black px-2">Offerings</span>
+        </h2>
+      </div>
+    
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 mt-10 max-w-[800px] mx-auto">
+        <div
+          class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between">
+          <div>
+            <img src="./images/ui-ux.png" alt="UI/UX" class="mx-auto w-12 h-12">
+            <h3 class="text-xl font-semibold mt-1">UI/UX Design</h3>
+          </div>
+          <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            Crafting engaging and aesthetically pleasing user-friendly interfaces for amazing experiences.
+          </p>
+          <div
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
+            →
+          </div>
+        </div>
+    
+        <div
+          class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between">
+          <div>
+            <img src="./images/frontend.png" alt="Frontend" class="mx-auto w-12 h-12">
+            <h3 class="text-xl font-semibold mt-1">Frontend</h3>
+          </div>
+          <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            Building and devloping responsive applications for seamless user interactions.
+          </p>
+          <div
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
+            →
+          </div>
+        </div>
+    
+        <div
+          class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between">
+          <div>
+            <img src="./images/backend.png" alt="Backend" class="mx-auto w-12 h-12">
+            <h3 class="text-xl font-semibold mt-1">Backend</h3>
+          </div>
+          <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            Building and maintaining the server-side logic, databases and application functionality that power a website
+          </p>
+          <div
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
+            →
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- CAROUSEL SECTION -->
+<!-- <section class="overflow-hidden bg-white py-16 px-6">
+  <div class="text-center ">
+    <p class="text-2xl font-semibold text-black-400">Our Project</p>
+    <h2 class="text-5xl font-bold mt-2 mb-7">
+      Discover Our <span class="bg-orange-500 text-black px-2">Projects</span>
+    </h2>
+  </div>
+  <div class="relative w-[300px] ">
+    <div id="carousel" class="flex gap-6 w-[200%] animate-scroll">
+      <img src="./images/1.png" alt="Portfolio 1" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 2" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 3" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 4" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 1" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 2" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 3" class="w-1/4 rounded-lg">
+      <img src="./images/1.png" alt="Portfolio 4" class="w-1/4 rounded-lg">
+    </div>
+  </div>
+</section> -->
+<section class="overflow-hidden bg-white py-10">
+  <div class="text-center ">
+    <p class="text-2xl font-semibold text-black-400">Our Project</p>
+    <h2 class="text-5xl font-bold mt-2 mb-7">
+      Discover My <span class="bg-orange-500 text-black px-2">Projects</span>
+    </h2>
+  </div>
+  <div class="relative w-full">
+    <div id="carousel" class="flex gap-6 w-[100%] animate-scroll">
+      <!-- Image Wrapper -->
+      <div class="relative w-1/4 group">
+        <img src="./images/1.png" alt="Portfolio 1" class="rounded-lg">
+        <!-- Overlay with Text -->
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+          <p class="text-white text-lg font-semibold">Project Title</p>
+        </div>
+      </div>
+
+      <div class="relative w-1/4 group">
+        <img src="./images/1.png" alt="Portfolio 2" class="rounded-lg">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+          <p class="text-white text-lg font-semibold">Project Title</p>
+        </div>
+      </div>
+
+      <div class="relative w-1/4 group">
+        <img src="./images/1.png" alt="Portfolio 3" class="rounded-lg">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+          <p class="text-white text-lg font-semibold">Project Title</p>
+        </div>
+      </div>
+
+      <div class="relative w-1/4 group">
+        <img src="./images/1.png" alt="Portfolio 4" class="rounded-lg">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+          <p class="text-white text-lg font-semibold">Project Title</p>
+        </div>
+      </div>
+
+      <!-- Duplicate for Seamless Loop -->
+      <div class="relative w-1/4 group">
+        <img src="./images/1.png" alt="Portfolio 1" class="rounded-lg">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
+          <p class="text-white text-lg font-semibold">Project Title</p>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
+
   </body>
 </html>
