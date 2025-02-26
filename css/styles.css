@@ -54,7 +54,7 @@
   animation: scroll 5s linear infinite;
 } */
 
-@keyframes scroll {
+/* @keyframes scroll {
   from {
     transform: translateX(0);
   }
@@ -69,5 +69,17 @@
 
 .paused {
   animation-play-state: paused;
+} */
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Moves entire set to left */
 }
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite; /* Adjust speed as needed */
+  width: 200%; /* Prevents gaps by ensuring enough images */
+}
+
 
