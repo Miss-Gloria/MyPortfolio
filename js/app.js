@@ -1,4 +1,8 @@
- var i = 0;
+ document.getElementById("menu-btn").addEventListener("click", function () {
+    document.getElementById("menu").classList.toggle("hidden");
+  });
+
+var i = 0;
   var txt = 'Your Vision, My Code, Let\'s Create Magic!!'; // Text to type
   var speed = 100; // Typing speed
 
@@ -18,33 +22,38 @@
     taos.init();
 });
 
-// const carousel = document.getElementById("carousel");
-// const images = carousel.children;
-// const totalSlides = images.length;
-// let index = 0;
 
-// function autoSlide() {
-//   index = (index + 1) % totalSlides;
-//   updateCarousel();
-// }
+  document.addEventListener("DOMContentLoaded", function () {
+    const faqs = document.querySelectorAll(".faq-btn");
 
-// function updateCarousel() {
-//   carousel.style.transform = `translateX(-${index * 100}%)`;
-// }
+    faqs.forEach((faq) => {
+      faq.addEventListener("click", function () {
+        // Find all FAQ contents and icons
+        const allContents = document.querySelectorAll(".faq-content");
+        const allIcons = document.querySelectorAll(".faq-icon");
+        
+        // Get the currently clicked content and icon
+        const content = this.nextElementSibling;
+        const icon = this.querySelector(".faq-icon");
 
-// // Auto-slide every 3 seconds
-// setInterval(autoSlide, 2000);
-  document.querySelectorAll(".faq-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const answer = btn.nextElementSibling;
-      const icon = btn.querySelector(".faq-icon");
+        // Close all other FAQs
+        allContents.forEach((c) => {
+          if (c !== content) c.classList.add("hidden");
+        });
 
-      if (answer.classList.contains("hidden")) {
-        answer.classList.remove("hidden");
-        icon.innerHTML = "▼"; // Change to down arrow
-      } else {
-        answer.classList.add("hidden");
-        icon.innerHTML = "➤"; // Change back to right arrow
-      }
+        allIcons.forEach((i) => {
+          if (i !== icon) i.textContent = "➤"; // Reset other icons
+        });
+
+        // Toggle the clicked FAQ
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.textContent = "▼"; // Change icon to down arrow
+        } else {
+          content.classList.add("hidden");
+          icon.textContent = "➤"; // Change back to right arrow
+        }
+      });
     });
   });
+
