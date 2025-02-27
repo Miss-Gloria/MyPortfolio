@@ -22,6 +22,12 @@ var i = 0;
     taos.init();
 });
 
+function toggleText(element) {
+        if (window.innerWidth < 768) { // Only apply click effect on mobile
+            let text = element.querySelector("p");
+            text.classList.toggle("opacity-100");
+        }
+    }
 
   document.addEventListener("DOMContentLoaded", function () {
     const faqs = document.querySelectorAll(".faq-btn");

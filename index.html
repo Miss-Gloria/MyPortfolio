@@ -11,53 +11,65 @@
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
-
 <body>
-  <nav class="flex items-center justify-between bg-black text-white px-6 md:px-10 py-4 border-b-2 border-gray-700">
-    <h1 class="text-xl md:text-2xl font-bold">WEB DEVELOPER</h1>
-    <div id="menu" class="hidden md:flex md:items-center md:gap-x-8 text-lg md:text-xl">
-      <a href="#" class="hover:text-orange-500">Home</a>
-      <a href="#" class="hover:text-orange-500">About</a>
-      <a href="#" class="hover:text-orange-500">Portfolio</a>
-      <a href="#" class="hover:text-orange-500">Blog</a>
-      <a href="#" class="hover:text-orange-500">Utility Pages</a>
-      <button
-        class="px-6 py-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black hover:text-white">
-        Contact Now
-      </button>
-    </div>
-    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
-      &#9776;
+ <nav class="flex items-center justify-between bg-black text-white px-6 md:px-10 py-4 border-b-2 border-gray-700">
+  <h1 class="text-xl md:text-2xl font-bold">WEB DEVELOPER</h1>
+
+
+  <button id="menu-btn" class="md:hidden text-white focus:outline-none text-2xl">
+    &#9776;
+  </button>
+  <div id="menu" class="hidden md:flex md:items-center md:gap-x-8 text-lg md:text-xl 
+        absolute md:static top-16 right-0 w-48 md:w-auto 
+        bg-black md:bg-transparent p-4 md:p-0 shadow-lg transition-all duration-300 ease-in-out">
+    <a href="#" class="hover:text-orange-500 block py-2">Home</a>
+    <a href="#" class="hover:text-orange-500 block py-2">About</a>
+    <a href="#" class="hover:text-orange-500 block py-2">Portfolio</a>
+    <a href="#" class="hover:text-orange-500 block py-2">Blog</a>
+    <a href="#" class="hover:text-orange-500 block py-2">Utility Pages</a>
+    <button
+      class="px-6 py-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black hover:text-white">
+      Contact Now
     </button>
-  </nav>
-
-
-  <section class="bg-black text-white min-h-screen flex items-center justify-center px-10">
+  </div>
+</nav>
+<section class="bg-black text-white min-h-screen flex items-center justify-center px-10">
     <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
-      <div class="max-w-lg text-left">
+      <div class="max-w-lg text-center md:text-left mx-auto">
         <p class="text-lg font-semibold">
           Gloria's <span class="text-orange-500">CodeNexus</span>
         </p>
-        <h1 id="typing-text" class="text-5xl font-bold mt-2 leading-tightmin-h-[80px]">
+        <h1 id="typing-text" class="text-7xl font-bold mt-2 leading-tight min-h-[80px]">
         </h1>
-        <button
-          class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:translate-x-1 before:translate-y-1 before:bg-white hover:bg-none hover:text-white mt-8">
-          Contact Now
+        <button class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black 
+                 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:translate-x-1 
+                 before:translate-y-1 before:bg-white hover:bg-none hover:text-white mt-8">
+          Read More
         </button>
       </div>
-      <div class="relative w-full h-[500px] bg-black flex justify-center">
-        <div class="absolute top-6 w-[620px] h-[468px] bg-orange-500 z-0">
-        </div>
-        <img src="./images/gee1.png" alt="Freelancer" class="relative z-10 w-90 h-[450px] object-cover rounded-lg" />
+
+      <div class="relative w-full h-[500px] bg-black flex justify-center items-center">
+        <!-- Orange Background - Fully Responsive -->
         <div
-          class="absolute top-0 left-1 bg-black text-white px-3 py-2 text-lg font-semibold border border-white animate-float">
+          class="absolute top-6 w-[90%] md:w-[500px] h-[450px] md:h-[500px] bg-orange-500 z-0 flex justify-center items-center rounded-lg overflow-hidden">
+          <!-- Centered & Always Rounded Image -->
+          <img src="./images/gee1.png" alt="Freelancer"
+            class="relative z-10 w-[75%] md:w-[90%] h-auto aspect-square object-cover rounded-full" />
+        </div>
+      
+        <!-- Floating Text - More Noticeable -->
+        <div
+          class="absolute top-0 left-2 bg-black text-white px-4 py-2 text-sm md:text-lg font-semibold border border-white animate-float">
           GLORIA LARBI
         </div>
         <div
-          class="absolute bottom-0 right-2 bg-black text-white px-4 py-2 text-lg font-semibold border border-white animate-float">
+          class="absolute bottom-0 right-2 bg-black text-white px-4 py-2 text-sm md:text-lg font-semibold border border-white animate-float">
           Web Developer
         </div>
       </div>
+
+
+
     </div>
   </section>
   <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-10 py-16 duration-[3000ms] ease-[cubic-bezier(.25,.1,.25,1)] taos:opacity-0
@@ -93,19 +105,21 @@
     <div class="text-center">
       <p class="text-lg font-semibold text-gray-400">My Services</p>
       <h2 class="text-4xl font-bold mt-2">
-        Comprehensive Creative <span class="bg-orange-500 text-black px-2">Offerings</span>
+        Creative <span class="bg-orange-500 text-black px-2">Offerings</span>
       </h2>
     </div>
-
+  
     <div class="grid grid-cols-1 md:grid-cols-3 gap-0 mt-10 max-w-[800px] mx-auto">
+      <!-- UI/UX -->
       <div
-        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between">
+        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
+        onclick="toggleText(this)">
         <div>
           <img src="./images/ui-ux.png" alt="UI/UX" class="mx-auto w-12 h-12">
           <h3 class="text-xl font-semibold mt-1">UI/UX Design</h3>
         </div>
         <p
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden">
           Crafting engaging and aesthetically pleasing user-friendly interfaces for amazing experiences.
         </p>
         <div
@@ -113,32 +127,36 @@
           →
         </div>
       </div>
-
+  
+      <!-- Frontend -->
       <div
-        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between">
+        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
+        onclick="toggleText(this)">
         <div>
           <img src="./images/frontend.png" alt="Frontend" class="mx-auto w-12 h-12">
           <h3 class="text-xl font-semibold mt-1">Frontend</h3>
         </div>
         <p
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          Building and devloping responsive applications for seamless user interactions.
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden">
+          Building and developing responsive applications for seamless user interactions.
         </p>
         <div
           class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
           →
         </div>
       </div>
-
+  
+      <!-- Backend -->
       <div
-        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between">
+        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
+        onclick="toggleText(this)">
         <div>
           <img src="./images/backend.png" alt="Backend" class="mx-auto w-12 h-12">
           <h3 class="text-xl font-semibold mt-1">Backend</h3>
         </div>
         <p
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          Building and maintaining the server-side logic, databases and application functionality that power a website
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden">
+          Building and maintaining the server-side logic, databases, and application functionality that power a website.
         </p>
         <div
           class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
@@ -158,41 +176,32 @@
       <div id="carousel" class="flex gap-6 w-[100%] animate-scroll">
         <!-- Image Wrapper -->
         <div class="relative w-1/4 group">
-          <img src="./images/p1.jpg" alt="Portfolio 1" class="rounded-lg">
+          <img src="./images/p1.jpg" alt="Portfolio 1" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <!-- Overlay with Text -->
           <div
             class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
             <p class="text-white text-lg font-semibold">Project Title</p>
           </div>
         </div>
-
+    
         <div class="relative w-1/4 group">
-          <img src="./images/p2.png" alt="Portfolio 2" class="rounded-lg">
+          <img src="./images/p2.png" alt="Portfolio 2" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <div
             class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
             <p class="text-white text-lg font-semibold">Project Title</p>
           </div>
         </div>
-
+    
         <div class="relative w-1/4 group">
-          <img src="./images/p3.png" alt="Portfolio 3" class="rounded-lg h-[413px]">
+          <img src="./images/p3.png" alt="Portfolio 3" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <div
             class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
             <p class="text-white text-lg font-semibold">Project Title</p>
           </div>
         </div>
-
+    
         <div class="relative w-1/4 group">
-          <img src="./images/cafe.png" alt="Portfolio 4" class="rounded-lg h-[413px]">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">Project Title</p>
-          </div>
-        </div>
-
-        <!-- Duplicate for Seamless Loop -->
-        <div class="relative w-1/4 group">
-          <img src="./images/p2.png" alt="Portfolio 1" class="rounded-lg">
+          <img src="./images/cafe.png" alt="Portfolio 4" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <div
             class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
             <p class="text-white text-lg font-semibold">Project Title</p>
@@ -200,12 +209,15 @@
         </div>
       </div>
     </div>
+
+    </div>
   </section>
   <section class="bg-gradient-to-r from-orange-500 to-orange-700 flex items-center justify-center min-h-screen p-6">
-    <div class="max-w-4xl w-full bg-white rounded-lg shadow-lg flex overflow-hidden h-[85vh]">
-
+    <div
+      class="max-w-4xl w-full bg-white rounded-lg shadow-lg flex flex-col md:flex-row overflow-hidden h-auto md:h-[85vh]">
+  
       <!-- Left Side (FAQ Section) -->
-      <div class="w-1/2 p-8 bg-black text-white flex flex-col justify-between h-full">
+      <div class="w-full md:w-1/2 p-8 bg-black text-white flex flex-col justify-between h-auto md:h-full">
         <div>
           <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div class="space-y-4">
@@ -219,7 +231,7 @@
                 I offer web design, development, UI/UX, and DevOps engineering.
               </p>
             </div>
-
+  
             <div class="border-b border-gray-500">
               <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
                 <span>How do I request a quote for my project?</span>
@@ -229,7 +241,7 @@
                 You can request a quote by filling out the contact form or reaching out via email.
               </p>
             </div>
-
+  
             <div class="border-b border-gray-500">
               <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
                 <span>What is the typical turnaround time for projects?</span>
@@ -249,11 +261,18 @@
                 The turnaround time depends on the project size, but typically ranges from 1-4 weeks.
               </p>
             </div>
-
-
+            <div class="border-b border-gray-500">
+              <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
+                <span>What is the typical turnaround time for projects?</span>
+                <span class="faq-icon">➤</span>
+              </button>
+              <p class="faq-content hidden text-gray-300 py-2">
+                The turnaround time depends on the project size, but typically ranges from 1-4 weeks.
+              </p>
+            </div>
           </div>
         </div>
-
+  
         <!-- Contact Message (Pinned at Bottom) -->
         <p class="mt-6 text-gray-300 text-lg">
           If you have more questions, email me at
@@ -263,12 +282,11 @@
           or fill out the contact form.
         </p>
       </div>
-
+  
       <!-- Right Side (Contact Form) -->
-      <!-- Right Side (Contact Form) -->
-      <div class="w-1/2 p-8">
+      <div class="w-full md:w-1/2 p-8">
         <h2 class="flex items-center justify-center text-3xl font-bold text-black">Contact Me</h2>
-
+  
         <form class="mt-4 space-y-4">
           <div>
             <label class="block text-sm font-medium text-gray-700">Name *</label>
@@ -286,12 +304,12 @@
             <label class="block text-sm font-medium text-gray-700">Message</label>
             <textarea class="w-full p-2 border border-gray-300 rounded" rows="4"></textarea>
           </div>
-
+  
           <!-- Privacy Notice & Submit Button in One Row -->
           <div class="flex items-center justify-between mt-2">
             <p class="text-xs text-gray-500 leading-tight">
               By submitting, you agree to our
-              <a href="#" class="text-orange-500 hover:underline">Privacy Policy</a>.
+              <a href="./assets/privacy.pdf" download class="text-orange-500 hover:underline">Privacy Policy</a>.
             </p>
             <button
               class="bg-orange-500 text-white px-4 py-2 rounded shadow-md transition-all duration-300 hover:bg-transparent hover:border hover:border-orange-500 hover:text-orange-500">
@@ -300,10 +318,9 @@
           </div>
         </form>
       </div>
-
-
     </div>
   </section>
+
 </body>
 
 </html>
