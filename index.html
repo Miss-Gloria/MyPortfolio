@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/taos@1.0.3/dist/taos.js"></script>
   <script src="./js/app.js" defer></script>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
@@ -22,18 +23,18 @@
   <div id="menu" class="hidden md:flex md:items-center md:gap-x-8 text-lg md:text-xl 
         absolute md:static top-16 right-0 w-48 md:w-auto 
         bg-black md:bg-transparent p-4 md:p-0 shadow-lg transition-all duration-300 ease-in-out">
-    <a href="#" class="hover:text-orange-500 block py-2">Home</a>
-    <a href="#" class="hover:text-orange-500 block py-2">About</a>
-    <a href="#" class="hover:text-orange-500 block py-2">Portfolio</a>
-    <a href="#" class="hover:text-orange-500 block py-2">Blog</a>
-    <a href="#" class="hover:text-orange-500 block py-2">Utility Pages</a>
+    <a href="#home" class="hover:text-orange-500 block py-2">Home</a>
+    <a href="#about" class="hover:text-orange-500 block py-2">About</a>
+    <a href="#services" class="hover:text-orange-500 block py-2">Services</a>
+    <a href="#project" class="hover:text-orange-500 block py-2">Project</a>
+    <a href="#skills" class="hover:text-orange-500 block py-2">Skills</a>
     <button
       class="px-6 py-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black hover:text-white">
       Contact Now
     </button>
   </div>
 </nav>
-<section class="bg-black text-white min-h-screen flex items-center justify-center px-10">
+<section id="home" class="bg-black text-white min-h-screen flex items-center justify-center px-10">
     <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
       <div class="max-w-lg text-center md:text-left mx-auto">
         <p class="text-lg font-semibold">
@@ -72,7 +73,7 @@
 
     </div>
   </section>
-  <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-10 py-16 duration-[3000ms] ease-[cubic-bezier(.25,.1,.25,1)] taos:opacity-0
+  <section id="about" class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-10 py-16 duration-[3000ms] ease-[cubic-bezier(.25,.1,.25,1)] taos:opacity-0
 ">
     <!-- Left: Image Section -->
     <div class="relative">
@@ -89,8 +90,10 @@
         Your trusted <span class="text-orange-500">Web Developer </span>Crafting Seamless Digital Experiences.
       </h1>
       <p class="text-gray-600 mt-4">
-        As a Web Developer, I specialize in crafting seamless digital experiences. With a passion for clean code and
-        modern design, I bring ideas to life through intuitive and responsive websites
+        Junior Web Developer passionate about building responsive and scalable websites. Proficient in HTML, CSS, and
+        JavaScript, with experience in version control (Git, GitHub) and website optimization. Expanding knowledge in DevOps
+        practices, including CI/CD automation, cloud hosting (AWS), and workflow optimization. Committed to continuous learning
+        and improving development processes for efficient, maintainable, and high-performing code. You can download my Cv by clicking on the button below.
       </p>
       <a href="./assets/My-CV.pdf" download>
         <button class="relative px-6 py-3 mt-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 
@@ -101,7 +104,7 @@
 
     </div>
   </section>
-  <section class="bg-black text-white py-16 px-6">
+  <section id="services" class="bg-black text-white py-16 px-6">
     <div class="text-center">
       <p class="text-lg font-semibold text-gray-400">My Services</p>
       <h2 class="text-4xl font-bold mt-2">
@@ -165,53 +168,70 @@
       </div>
     </div>
   </section>
-  <section class="overflow-hidden bg-white py-10">
-    <div class="text-center ">
+  <section id="skills" class="bg-orange-600 py-12">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-semibold text-black mb-6 ">My Skills</h2>
+  
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center">
+        <img src="https://www.svgrepo.com/show/452228/html-5.svg" alt="HTML" class="w-14 h-14">
+        <img src="https://www.svgrepo.com/show/452185/css-3.svg" alt="CSS" class="w-14 h-14">
+        <img src="https://www.svgrepo.com/show/353925/javascript.svg" alt="JavaScript" class="w-14 h-14">
+        <img src="https://www.svgrepo.com/show/452211/github.svg" alt="React" class="w-14 h-14">
+        <img src="https://www.svgrepo.com/show/448299/aws.svg" alt="Node.js" class="w-14 h-14">
+        <img src="https://www.svgrepo.com/show/452210/git.svg" alt="GitHub" class="w-14 h-14">
+      </div>
+    </div>
+  </section>
+
+  <section id="project" class="overflow-hidden bg-white py-10">
+    <div class="text-center">
       <p class="text-2xl font-semibold text-black-400">My Project</p>
       <h2 class="text-5xl font-bold mt-2 mb-7">
         Discover My <span class="bg-orange-500 text-black px-2">Projects</span>
       </h2>
     </div>
+  
     <div class="relative w-full">
       <div id="carousel" class="flex gap-6 w-[100%] animate-scroll">
-        <!-- Image Wrapper -->
-        <div class="relative w-1/4 group">
+        <!-- Project 1 -->
+        <a href="https://seefrance.netlify.app/" target="_blank" class="relative w-1/4 group">
           <img src="./images/p1.jpg" alt="Portfolio 1" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
-          <!-- Overlay with Text -->
           <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">Project Title</p>
+            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">See france website</p>
           </div>
-        </div>
-    
-        <div class="relative w-1/4 group">
+        </a>
+  
+        <!-- Project 2 -->
+        <a href="https://geetech.netlify.app/" target="_blank" class="relative w-1/4 group">
           <img src="./images/p2.png" alt="Portfolio 2" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">Project Title</p>
+            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">A Tech based site offering services such as building websites</p>
           </div>
-        </div>
-    
-        <div class="relative w-1/4 group">
+        </a>
+  
+        <!-- Project 3 -->
+        <a href="https://gloria-larbi.netlify.app/" target="_blank" class="relative w-1/4 group">
           <img src="./images/p3.png" alt="Portfolio 3" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">Project Title</p>
+            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">My Current Portfolio</p>
           </div>
-        </div>
-    
-        <div class="relative w-1/4 group">
+        </a>
+  
+        <!-- Project 4 -->
+        <a href="https://geetech.netlify.app/" target="_blank" class="relative w-1/4 group">
           <img src="./images/cafe.png" alt="Portfolio 4" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
           <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">Project Title</p>
+            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">A site for a simple cafe menu</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
-
-    </div>
   </section>
+
   <section class="bg-gradient-to-r from-orange-500 to-orange-700 flex items-center justify-center min-h-screen p-6">
     <div
       class="max-w-4xl w-full bg-white rounded-lg shadow-lg flex flex-col md:flex-row overflow-hidden h-auto md:h-[85vh]">
@@ -318,6 +338,52 @@
       </div>
     </div>
   </section>
+<footer class="bg-black text-white py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+
+    <!-- Left Section: Description -->
+    <div class="mb-6 md:mb-0 md:w-1/3">
+      <p class="text-gray-400 mt-2 text-sm">
+        Gloria is dedicated to providing a platform where visions for websites are achievable.
+      </p>
+
+      <!-- Social Icons -->
+      <div class="flex justify-center md:justify-start space-x-4 mt-4">
+        <a href="https://github.com/Miss-Gloria" target="_blank"
+          class="w-8 h-8 flex items-center justify-center bg-orange-500 rounded-full">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/glorialarbi" target="_blank"
+          class="w-8 h-8 flex items-center justify-center bg-orange-500 rounded-full">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <!-- <a href="https://facebook.com/yourfacebook" target="_blank"
+          class="w-8 h-8 flex items-center justify-center bg-orange-500 rounded-full">
+          <i class="fa fa-facebook" aria-hidden="true" ></i>
+        </a> -->
+      </div>
+    </div>
+
+    <!-- Right Section: Newsletter -->
+    <div class="md:w-1/3">
+      <h3 class="text-lg font-semibold text-white">Miss-Gee Newsletter</h3>
+      <p class="text-gray-400 text-sm mt-2">
+        Subscribe to our newsletter for updates, insights, and offers.
+      </p>
+
+      <form class="flex mt-4 bg-gray-800 rounded-lg overflow-hidden border border-gray-600">
+        <input type="email" placeholder="Your Email Here"
+          class="flex-1 px-4 py-2 text-white bg-transparent focus:outline-none placeholder-gray-400">
+        <button class="bg-orange-500 px-4 py-2 text-black font-semibold">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Copyright Section -->
+  <div class="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
+    © Miss-Gee All rights reserved. | Designed by Gloria
+  </div>
+</footer>
 
 </body>
 
