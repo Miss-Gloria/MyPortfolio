@@ -1,3 +1,22 @@
+ document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    // Show button when user scrolls down
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.remove("opacity-0");
+        } else {
+            scrollToTopBtn.classList.add("opacity-0");
+        }
+    });
+
+    // Scroll to top smoothly on button click
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+ 
  document.getElementById("menu-btn").addEventListener("click", function () {
     document.getElementById("menu").classList.toggle("hidden");
   });
