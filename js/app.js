@@ -2,11 +2,6 @@
     const scrollToTopBtn = document.getElementById("scrollToTop");
 
     
-  document.getElementById("profile-image").addEventListener("click", function () {
-      this.classList.add("animate-shake");
-      setTimeout(() => this.classList.remove("animate-shake"), 500);
-      window.location.href = "#about";
-    });
 
     window.addEventListener("scroll", function () {
         if (window.scrollY > 300) {
@@ -27,25 +22,6 @@
     document.getElementById("menu").classList.toggle("hidden");
   });
 
-// var i = 0;
-//   var txt = 'Your Vision, My Code, Let\'s Create Magic!!';
-//   var speed = 100; 
-
-//   function typeWriter() {
-//     if (i < txt.length) {
-//       document.getElementById("typing-text").innerHTML += txt.charAt(i);
-//       i++;
-//       setTimeout(typeWriter, speed);
-//     }
-//   }
-
-//   // Start typing when page loads
-//   window.onload = function () {
-//     typeWriter();
-//   };
-//   document.addEventListener("DOMContentLoaded", () => {
-//     taos.init();
-// });
 
 function toggleText(element) {
         if (window.innerWidth < 768) { // Only apply click effect on mobile
