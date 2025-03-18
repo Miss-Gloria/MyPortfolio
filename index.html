@@ -1,407 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyPortfolio</title>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/taos@1.0.3/dist/taos.js"></script>
-  <script src="./js/app.js" defer></script>
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body>
-  <button id="scrollToTop"
-    class="fixed bottom-6 right-6 bg-orange-900 text-white p-3 rounded-full shadow-lg hover:bg-orange-800 transition-opacity duration-300 opacity-0">
-    <i class="fa fa-arrow-up" aria-hidden="true"></i>
-  </button>
-
-<nav
-  class="fixed top-0 left-0 w-full flex items-center justify-between bg-black/30 backdrop-blur-md text-white px-6 md:px-10 py-4 z-50">
-
-  
-  <a href="#home" class="flex items-center ml-4 md:ml-6">
-    <img src="./images/n-removebg-preview.png" alt="Logo"
-      class="w-20 md:w-24 lg:w-28 h-auto max-h-12 md:max-h-16 object-contain">
-  </a>
-
-  <button id="menu-btn" class="md:hidden text-white focus:outline-none text-2xl">
-    &#9776;
-  </button>
-
- 
-  <div id="menu" class="hidden md:flex md:items-center md:gap-x-8 text-lg md:text-xl 
-        absolute md:static top-16 right-0 w-48 md:w-auto 
-        bg-transparent md:bg-transparent p-4 md:p-0 shadow-lg transition-all duration-300 ease-in-out">
-    <a href="#home" class="hover:text-orange-500 block py-2">Home</a>
-    <a href="#about" class="hover:text-orange-500 block py-2">About</a>
-    <a href="#services" class="hover:text-orange-500 block py-2">Services</a>
-    <a href="#project" class="hover:text-orange-500 block py-2">Project</a>
-    <a href="#skills" class="hover:text-orange-500 block py-2">Skills</a>
-    <a href="#contact">
-      <button
-        class="px-6 py-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black hover:text-white">
-        Contact Now
-      </button>
-    </a>
-  </div>
-
-</nav>
-
-
-
-<section id="home" class="bg-black text-white min-h-screen flex items-center justify-center px-10 pt-24 ">
-    <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
-      <div class="max-w-lg text-center md:text-left mx-auto">
-        <p class="text-lg font-semibold">
-          Gloria's <span class="text-orange-500">CodeNexus</span>
-        </p>
-        <h1 id="typing-text" class="text-7xl font-bold mt-2 leading-tight min-h-[80px]">
-        </h1>
-        <button class="relative px-8 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black 
-                 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:translate-x-1 
-                 before:translate-y-1 before:bg-white hover:bg-none hover:text-white mt-8">
-          Read More
-        </button>
-      </div>
-
-      <div class="relative w-full h-[500px] bg-black flex justify-center items-center">
-        
-        <div
-          class="absolute top-6 w-[90%] md:w-[500px] h-[450px] md:h-[500px] bg-orange-500 z-0 flex justify-center items-center rounded-lg overflow-hidden">
-          
-          <img src="./images/gee1.png" alt="Freelancer"
-            class="relative z-10 w-[75%] md:w-[90%] h-auto aspect-square object-cover rounded-full" />
-        </div>
-      
-      
-        <div
-          class="absolute top-0 left-2 bg-black text-white px-4 py-2 text-sm md:text-lg font-semibold border border-white animate-float">
-          GLORIA LARBI
-        </div>
-        <div
-          class="absolute bottom-0 right-2 bg-black text-white px-4 py-2 text-sm md:text-lg font-semibold border border-white animate-float">
-          Web Developer
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-  <section id="about" class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-10 py-16 duration-[3000ms] ease-[cubic-bezier(.25,.1,.25,1)] taos:opacity-0
-">
-  
-    <div class="relative">
-      <img src="./images/2.png" alt="Person" class="w-[500px]  h-[600px]">
-      <h2 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-7xl font-bold text-white opacity-60">
-        GLORIA LARBI
-      </h2>
-    </div>
-
-    
-    <div class="text-left">
-      <h3 class="text-2xl font-semibold">About Me</h3>
-      <h1 class="text-5xl font-bold mt-2 leading-tight">
-        Your trusted <span class="text-orange-500">Web Developer </span>Crafting Seamless Digital Experiences.
-      </h1>
-      <p class="text-gray-600 mt-4">
-        Junior Web Developer passionate about building responsive and scalable websites. Proficient in HTML, CSS, and
-        JavaScript, with experience in version control (Git, GitHub) and website optimization. Expanding knowledge in DevOps
-        practices, including CI/CD automation, cloud hosting (AWS), and workflow optimization. Committed to continuous learning
-        and improving development processes for efficient, maintainable, and high-performing code. You can download my Cv by clicking on the button below.
-      </p>
-      <a href="./assets/My-CV.pdf" download>
-        <button class="relative px-6 py-3 mt-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold border-2 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 
-          before:translate-x-1 before:translate-y-1 before:bg-white hover:bg-none hover:text-black">
-          My CV
-        </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/taos@1.0.3/dist/taos.js"></script>
+    <script src="./js/app.js" defer></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+   <body>
+    <nav id="navbar"
+      class="top-0 left-0 w-full flex items-center justify-between bg-gradient-to-b from-[#100014] via-[#1b001f] to-[#3a0a52] text-white px-6 md:px-10 py-5 z-50 transition-all duration-300 md:fixed">
+      <a href="#home" class="flex items-center ml-4 md:ml-6">
+        <img src="./images/n-removebg-preview.png" alt="Logo"
+          class="w-20 md:w-24 lg:w-28 h-auto max-h-12 md:max-h-16 object-contain">
       </a>
-
-    </div>
-  </section>
-  <section id="services" class="bg-black text-white py-16 px-6">
-    <div class="text-center">
-      <p class="text-lg font-semibold text-gray-400">My Services</p>
-      <h2 class="text-4xl font-bold mt-2">
-        Creative <span class="bg-orange-500 text-black px-2">Offerings</span>
-      </h2>
-    </div>
-  
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 mt-10 max-w-[800px] mx-auto">
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none text-2xl">&#9776;</button>
+      <div id="menu"
+        class="hidden md:flex md:items-center md:gap-x-8 text-lg md:text-xl absolute md:static top-16 right-0 w-48 md:w-auto bg-purple-900 md:bg-transparent p-4 md:p-0 shadow-lg transition-all duration-300 ease-in-out">
+        <a href="#home" class="hover:text-purple-400 block py-2">Home</a>
+        <a href="#about" class="hover:text-purple-400 block py-2">About</a>
+        <a href="#services" class="hover:text-purple-400 block py-2">Services</a>
+        <a href="#project" class="hover:text-purple-400 block py-2">Projects</a>
+        <a href="#skills" class="hover:text-purple-400 block py-2">Skills</a>
+        <a href="#contact">
+          <button
+            class="px-6 py-2 font-semibold border-2 border-black bg-gradient-to-r from-purple-400 to-purple-900 text-black hover:from-purple-500 hover:to-white transition-all">
+            Contact Now
+          </button>
+        </a>
+      </div>
+    </nav>
     
-      <div
-        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
-        onclick="toggleText(this)">
-        <div>
-          <img src="./images/ui-ux.png" alt="UI/UX" class="mx-auto w-12 h-12">
-          <h3 class="text-xl font-semibold mt-1">DevOps</h3>
-        </div>
-        <p
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden">
-          Crafting engaging and aesthetically pleasing user-friendly interfaces for amazing experiences.
-        </p>
-        <div
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
-          →
-        </div>
-      </div>
-  
-      <div
-        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
-        onclick="toggleText(this)">
-        <div>
-          <img src="./images/frontend.png" alt="Frontend" class="mx-auto w-12 h-12">
-          <h3 class="text-xl font-semibold mt-1">Frontend</h3>
-        </div>
-        <p
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden">
-          Building and developing responsive applications for seamless user interactions.
-        </p>
-        <div
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
-          →
-        </div>
-      </div>
-  
-      
-      <div
-        class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
-        onclick="toggleText(this)">
-        <div>
-          <img src="./images/backend.png" alt="Backend" class="mx-auto w-12 h-12">
-          <h3 class="text-xl font-semibold mt-1">Backend</h3>
-        </div>
-        <p
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden">
-          Building and maintaining the server-side logic, databases, and application functionality that power a website.
-        </p>
-        <div
-          class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-orange-500 mx-auto">
-          →
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="skills" class="py-12">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-semibold text-black mb-6">My Skills</h2>
-  
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center mb-6">
-        <img src="https://www.svgrepo.com/show/452228/html-5.svg" alt="HTML" class="w-14 h-14">
-        <img src="https://www.svgrepo.com/show/452185/css-3.svg" alt="CSS" class="w-14 h-14">
-        <img src="https://www.svgrepo.com/show/353925/javascript.svg" alt="JavaScript" class="w-14 h-14">
-        <img src="https://www.svgrepo.com/show/452211/github.svg" alt="React" class="w-14 h-14">
-        <img src="https://www.svgrepo.com/show/448299/aws.svg" alt="Node.js" class="w-14 h-14">
-        <img src="https://www.svgrepo.com/show/452210/git.svg" alt="GitHub" class="w-14 h-14">
-      </div>
-  
-      <div class="border-t-4 border-orange-700 w-full mx-auto mt-8 md:mt-12"></div>
-    </div>
-  </section>
-
-
-  <section id="project" class="overflow-hidden bg-white py-10">
-    <div class="text-center">
-      <p class="text-2xl font-semibold text-black-400">My Project</p>
-      <h2 class="text-5xl font-bold mt-2 mb-7">
-        Discover My <span class="bg-orange-500 text-black px-2">Projects</span>
-      </h2>
-    </div>
-  
-    <div class="relative w-full">
-      <div id="carousel" class="flex gap-6 w-[100%] animate-scroll">
-        
-        <a href="https://seefrance.netlify.app/" target="_blank" class="relative w-1/4 group">
-          <img src="./images/p1.jpg" alt="Portfolio 1" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">See france website</p>
-          </div>
-        </a>
-  
-        
-        <a href="https://geetech.netlify.app/" target="_blank" class="relative w-1/4 group">
-          <img src="./images/p2.png" alt="Portfolio 2" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">A Tech based site offering services such as building websites</p>
-          </div>
-        </a>
-  
-        
-        <a href="https://gloria-larbi.netlify.app/" target="_blank" class="relative w-1/4 group">
-          <img src="./images/p3.png" alt="Portfolio 3" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">My Current Portfolio</p>
-          </div>
-        </a>
-  
-        
-        <a href="https://gee-cafe.netlify.app/" target="_blank" class="relative w-1/4 group">
-          <img src="./images/cafe.png" alt="Portfolio 4" class="w-full h-[250px] md:h-[400px] object-cover rounded-lg">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            <p class="text-white text-lg font-semibold">A site for a simple cafe menu</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="bg-gradient-to-r from-orange-500 to-orange-700 flex items-center justify-center min-h-screen p-6">
-    <div
-      class="max-w-4xl w-full bg-white rounded-lg shadow-lg flex flex-col md:flex-row overflow-hidden h-auto md:h-[85vh]">
-  
-      <div class="w-full md:w-1/2 p-8 bg-black text-white flex flex-col justify-between h-auto md:h-full">
-        <div>
-          <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div class="space-y-4">
-            <div class="border-b border-gray-500">
-              <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
-                <span>What services do you offer?</span>
-                <span class="faq-icon">➤</span>
-              </button>
-              <p class="faq-content hidden text-gray-300 py-2">
-                I offer web design, development, UI/UX, and DevOps engineering.
-              </p>
-            </div>
-  
-            <div class="border-b border-gray-500">
-              <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
-                <span>How do I request a quote for my project?</span>
-                <span class="faq-icon">➤</span>
-              </button>
-              <p class="faq-content hidden text-gray-300 py-2">
-                You can request a quote by filling out the contact form or reaching out via email.
-              </p>
-            </div>
-  
-            <div class="border-b border-gray-500">
-              <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
-                <span>What is the typical turnaround time for projects?</span>
-                <span class="faq-icon">➤</span>
-              </button>
-              <p class="faq-content hidden text-gray-300 py-2">
-                The turnaround time depends on the project size, but typically ranges from 1-4 weeks.
-              </p>
-            </div>
-
-            <div class="border-b border-gray-500">
-              <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
-                <span>Can you redesign my existing website?</span>
-                <span class="faq-icon">➤</span>
-              </button>
-              <p class="faq-content hidden text-gray-300 py-2">
-                Yes! If you already have a website that needs a fresh look, I can redesign it to improve both aesthetics and
-                functionality.
-              </p>
-            </div>
-            <div class="border-b border-gray-500">
-              <button class="w-full text-left flex justify-between items-center py-3 faq-btn">
-                <span>Will my website be mobile-friendly?</span>
-                <span class="faq-icon">➤</span>
-              </button>
-              <p class="faq-content hidden text-gray-300 py-2">
-                Absolutely! I ensure all websites are responsive and look great on desktops, tablets, and mobile devices
-              </p>
-            </div>
-          </div>
-        </div>
-  
-        <p class="mt-6 text-gray-300 text-lg">
-          If you have more questions, email me at
-          <a href="mailto:glolarbi1234@gmail.com" class="text-orange-400 hover:underline">
-            glolarbi1234@gmail.com
-          </a>
-          or fill out the contact form.
-        </p>
-      </div>
-  
-    
-      <div class="w-full md:w-1/2 p-8">
-        <h2 class="flex items-center justify-center text-3xl font-bold text-black">Contact Me</h2>
-  
-        <form class="mt-4 space-y-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700">Name *</label>
-            <input type="text" class="w-full p-2 border border-gray-300 rounded" required>
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700">Email *</label>
-            <input type="email" class="w-full p-2 border border-gray-300 rounded" required>
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700">Phone</label>
-            <input type="text" class="w-full p-2 border border-gray-300 rounded">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea class="w-full p-2 border border-gray-300 rounded" rows="4"></textarea>
-          </div>
-  
-          
-          <div class="flex items-center justify-between mt-2">
-            <p class="text-xs text-gray-500 leading-tight">
-              By submitting, you agree to our
-              <a href="./assets/privacy.pdf" download class="text-orange-500 hover:underline">Privacy Policy</a>.
-            </p>
+    <section id="home"
+      class="bg-gradient-to-b from-[#100014] via-[#1b001f] to-[#3a0a52] text-white min-h-screen flex items-center justify-center px-10 pt-28 md:pt-36">
+      <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="max-w-lg text-center md:text-left mx-auto">
+          <p class="text-lg font-semibold bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">
+            Gloria's <span class="text-purple-400">CodeNexus</span>
+          </p>
+          <h1 id="typing-text"
+            class="text-5xl md:text-6xl font-bold mt-2 leading-tight bg-gradient-to-r from-purple-300 to-white bg-clip-text text-transparent">
+            Hey, I'm Gloria, a <span class="text-purple-400">Web Developer</span> & <span class="text-purple-400">DevOps
+              Engineer</span>
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-gray-300">Building digital experiences with clean code and creative
+            solutions.</p>
+          <a href="https://linkedin.com/in/glorialarbi" target="_blank">
             <button
-              class="bg-orange-500 text-white px-4 py-2 rounded shadow-md transition-all duration-300 hover:bg-transparent hover:border hover:border-orange-500 hover:text-orange-500">
-              Submit
+              class="relative px-8 py-3 font-semibold border-2 border-black bg-gradient-to-r from-purple-400 to-purple-900 hover:from-purple-400 hover:to-white mt-8 transition-all">
+              More Of Me
             </button>
+          </a>
+        </div>
+        <div class="relative w-full h-[450px] flex justify-center items-center">
+          <!-- Shortened and Tilted Box -->
+          <div id="profile-box"
+            class="absolute top-6 w-[85%] md:w-[400px] h-[400px] bg-purple-500 z-0 flex justify-center items-center rounded-lg overflow-hidden cursor-pointer transition-transform duration-300 rotate-[-6deg]">
+            <img src="./images/gee1.png" alt="Freelancer"
+              class="relative z-10 w-[75%] md:w-[90%] h-auto aspect-square object-cover rounded-full" />
           </div>
-        </form>
+          <!-- Animated Text -->
+          <div
+            class="absolute top-0 left-2 bg-black text-white px-4 py-2 text-sm md:text-lg font-semibold border border-white animate-bounce-slow">
+            DevOps Engineer</div>
+          <div
+            class="absolute bottom-0 right-2 bg-black text-white px-4 py-2 text-sm md:text-lg font-semibold border border-white animate-bounce-slow">
+            Web Developer</div>
+        </div>
       </div>
-    </div>
-  </section>
-<footer class="bg-black text-white py-10 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-
+    </section>
     
-    <div class="mb-6 md:mb-0 md:w-1/3">
-      <p class="text-gray-400 mt-2 text-sm">
-        Gloria is dedicated to providing a platform where visions for websites are achievable.
-      </p>
-
-      
-      <div class="flex justify-center md:justify-start space-x-4 mt-4">
-        <a href="https://github.com/Miss-Gloria" target="_blank"
-          class="w-8 h-8 flex items-center justify-center bg-orange-500 rounded-full">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/glorialarbi" target="_blank"
-          class="w-8 h-8 flex items-center justify-center bg-orange-500 rounded-full">
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </a>
-       
+    <section
+      id="about"
+      class="grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-10 py-16 duration-[3000ms] ease-[cubic-bezier(.25,.1,.25,1)] taos:opacity-0"
+    >
+      <div class="relative">
+        <img src="./images/2.png" alt="Person" class="w-[500px] h-[600px]" />
+        <h2
+          class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-7xl font-bold text-white opacity-60"
+        >
+          GLORIA LARBI
+        </h2>
       </div>
-    </div>
 
-    
-    <div class="md:w-1/3">
-      <h3 class="text-lg font-semibold text-white">Miss-Gee Newsletter</h3>
-      <p class="text-gray-400 text-sm mt-2">
-        Subscribe to our newsletter for updates, insights, and offers.
-      </p>
+      <div class="text-left">
+        <h3 class="text-2xl font-semibold">About Me</h3>
+        <h1 class="text-5xl font-bold mt-2 leading-tight">
+          Your trusted
+          <span class="text-purple-500">Web Developer </span>Crafting Seamless
+          Digital Experiences.
+        </h1>
+        <p class="text-gray-600 mt-4">
+          Junior Web Developer passionate about building responsive and scalable
+          websites. Proficient in HTML, CSS, and JavaScript, with experience in
+          version control (Git, GitHub) and website optimization. Expanding
+          knowledge in DevOps practices, including CI/CD automation, cloud
+          hosting (AWS), and workflow optimization. Committed to continuous
+          learning and improving development processes for efficient,
+          maintainable, and high-performing code. You can download my Cv by
+          clicking on the button below.
+        </p>
+        <a href="./assets/My-CV.pdf" download>
+          <button
+            class="relative px-6 py-3 mt-6 bg-gradient-to-r from-purple-500 to-purple-900 text-black font-semibold border-2 border-black before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:translate-x-1 before:translate-y-1 before:bg-white hover:bg-none hover:text-black"
+          >
+            My CV
+          </button>
+        </a>
+      </div>
+    </section>
+    <section class="bg-[#100014] text-white py-10 px-6 md:px-12">
+      <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <h2 class="text-6xl font-bold text-gray-300 transition-transform duration-300 transform scale-100 hover:scale-200">
+1+</h2>
+          <p class="text-gray-400 text-3xl">Years of <br> Working Experience</p>
+        </div>
+        <div>
+          <h2 class="text-6xl font-bold text-gray-300 transition-transform duration-300 transform scale-100 hover:scale-200">
+5+</h2>
+          <p class="text-gray-400 text-3xl">Projects <br> Completed</p>
+        </div>
+        <div>
+          <h2 class="text-6xl font-bold text-gray-300 transition-transform duration-300 transform scale-100 hover:scale-200">4+</h2>
+          <p class="text-gray-400 text-3xl">Developed <br> Websites</p>
+        </div>
+        <div>
+          <h2 class="text-6xl font-bold text-gray-300 transition-transform duration-300 transform scale-100 hover:scale-200">1+</h2>
+          <p class="text-gray-400 text-3xl">as Web Developer <br> Devops Engineer</p>
+        </div>
+      </div>
+    </section>
 
-      <form class="flex mt-4 bg-gray-800 rounded-lg overflow-hidden border border-gray-600">
-        <input type="email" placeholder="Your Email Here"
-          class="flex-1 px-4 py-2 text-white bg-transparent focus:outline-none placeholder-gray-400">
-        <button class="bg-orange-500 px-4 py-2 text-black font-semibold">Subscribe</button>
-      </form>
-    </div>
-  </div>
+    <section id="services" class="bg-black text-white py-16 px-6">
+      <div class="text-center">
+        <p class="text-lg font-semibold text-gray-400">My Services</p>
+        <h2 class="text-4xl font-bold mt-2">
+          Creative <span class="bg-purple-500 text-black px-2">Offerings</span>
+        </h2>
+      </div>
 
-  
-  <div class="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4">
-    © Miss-Gee All rights reserved. | Designed by Gloria
-  </div>
-</footer>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-0 mt-10 max-w-[800px] mx-auto"
+      >
+        <div
+          class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
+          onclick="toggleText(this)"
+        >
+          <div>
+            <img
+              src="./images/ui-ux.png"
+              alt="UI/UX"
+              class="mx-auto w-12 h-12"
+            />
+            <h3 class="text-xl font-semibold mt-1">DevOps</h3>
+          </div>
+          <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden"
+          >
+            Crafting engaging and aesthetically pleasing user-friendly
+            interfaces for amazing experiences.
+          </p>
+          <div
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-purple-500 mx-auto"
+          >
+            →
+          </div>
+        </div>
 
-</body>
+        <div
+          class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
+          onclick="toggleText(this)"
+        >
+          <div>
+            <img
+              src="./images/frontend.png"
+              alt="Frontend"
+              class="mx-auto w-12 h-12"
+            />
+            <h3 class="text-xl font-semibold mt-1">Frontend</h3>
+          </div>
+          <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden"
+          >
+            Building and developing responsive applications for seamless user
+            interactions.
+          </p>
+          <div
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-purple-500 mx-auto"
+          >
+            →
+          </div>
+        </div>
 
+        <div
+          class="group border border-gray-700 p-2 text-center relative overflow-hidden h-[350px] flex flex-col justify-between"
+          onclick="toggleText(this)"
+        >
+          <div>
+            <img
+              src="./images/backend.png"
+              alt="Backend"
+              class="mx-auto w-12 h-12"
+            />
+            <h3 class="text-xl font-semibold mt-1">Backend</h3>
+          </div>
+          <p
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mobile-hidden"
+          >
+            Building and maintaining the server-side logic, databases, and
+            application functionality that power a website.
+          </p>
+          <div
+            class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-black transition-all duration-300 scale-75 group-hover:scale-100 group-hover:bg-purple-500 mx-auto"
+          >
+            →
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="py-12">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-semibold text-black mb-6">My Skills</h2>
+
+        <div
+          class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 place-items-center mb-6"
+        >
+          <img
+            src="https://www.svgrepo.com/show/452228/html-5.svg"
+            alt="HTML"
+            class="w-14 h-14"
+          />
+          <img
+            src="https://www.svgrepo.com/show/452185/css-3.svg"
+            alt="CSS"
+            class="w-14 h-14"
+          />
+          <img
+            src="https://www.svgrepo.com/show/353925/javascript.svg"
+            alt="JavaScript"
+            class="w-14 h-14"
+          />
+          <img
+            src="https://www.svgrepo.com/show/452211/github.svg"
+            alt="React"
+            class="w-14 h-14"
+          />
+          <img
+            src="https://www.svgrepo.com/show/448299/aws.svg"
+            alt="Node.js"
+            class="w-14 h-14"
+          />
+          <img
+            src="https://www.svgrepo.com/show/452210/git.svg"
+            alt="GitHub"
+            class="w-14 h-14"
+          />
+        </div>
+
+        <div
+          class="border-t-4 border-purple-700 w-full mx-auto mt-8 md:mt-12"
+        ></div>
+      </div>
+    </section>
+
+    <section id="project" class="overflow-hidden bg-white py-10">
+      <div class="text-center">
+        <p class="text-2xl font-semibold text-black-400">My Project</p>
+        <h2 class="text-5xl font-bold mt-2 mb-7">
+          Discover My
+          <span class="bg-purple-500 text-black px-2">Projects</span>
+        </h2>
+      </div>
+
+      <div class="relative w-full">
+        <div id="carousel" class="flex gap-6 w-[100%] animate-scroll">
+          <a
+            href="https://seefrance.netlify.app/"
+            target="_blank"
+            class="relative w-1/4 group"
+          >
+            <img
+              src="./images/p1.jpg"
+              alt="Portfolio 1"
+              class="w-full h-[250px] md:h-[400px] object-cover rounded-lg"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+            >
+              <p class="text-white text-lg font-semibold">See france website</p>
+            </div>
+          </a>
+
+          <a
+            href="https://geetech.netlify.app/"
+            target="_blank"
+            class="relative w-1/4 group"
+          >
+            <img
+              src="./images/p2.png"
+              alt="Portfolio 2"
+              class="w-full h-[250px] md:h-[400px] object-cover rounded-lg"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+            >
+              <p class="text-white text-lg font-semibold">
+                A Tech based site offering services such as building websites
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="https://gloria-larbi.netlify.app/"
+            target="_blank"
+            class="relative w-1/4 group"
+          >
+            <img
+              src="./images/p3.png"
+              alt="Portfolio 3"
+              class="w-full h-[250px] md:h-[400px] object-cover rounded-lg"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+            >
+              <p class="text-white text-lg font-semibold">
+                My Current Portfolio
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="https://gee-cafe.netlify.app/"
+            target="_blank"
+            class="relative w-1/4 group"
+          >
+            <img
+              src="./images/cafe.png"
+              alt="Portfolio 4"
+              class="w-full h-[250px] md:h-[400px] object-cover rounded-lg"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"
+            >
+              <p class="text-white text-lg font-semibold">
+                A site for a simple cafe menu
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center min-h-screen p-6"
+    >
+      <div
+        class="max-w-4xl w-full bg-white rounded-lg shadow-lg flex flex-col md:flex-row overflow-hidden h-auto md:h-[85vh]"
+      >
+        <div
+          class="w-full md:w-1/2 p-8 bg-black text-white flex flex-col justify-between h-auto md:h-full"
+        >
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+              <div class="border-b border-gray-500">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 faq-btn"
+                >
+                  <span>What services do you offer?</span>
+                  <span class="faq-icon">➤</span>
+                </button>
+                <p class="faq-content hidden text-gray-300 py-2">
+                  I offer web design, development, UI/UX, and DevOps
+                  engineering.
+                </p>
+              </div>
+
+              <div class="border-b border-gray-500">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 faq-btn"
+                >
+                  <span>How do I request a quote for my project?</span>
+                  <span class="faq-icon">➤</span>
+                </button>
+                <p class="faq-content hidden text-gray-300 py-2">
+                  You can request a quote by filling out the contact form or
+                  reaching out via email.
+                </p>
+              </div>
+
+              <div class="border-b border-gray-500">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 faq-btn"
+                >
+                  <span>What is the typical turnaround time for projects?</span>
+                  <span class="faq-icon">➤</span>
+                </button>
+                <p class="faq-content hidden text-gray-300 py-2">
+                  The turnaround time depends on the project size, but typically
+                  ranges from 1-4 weeks.
+                </p>
+              </div>
+
+              <div class="border-b border-gray-500">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 faq-btn"
+                >
+                  <span>Can you redesign my existing website?</span>
+                  <span class="faq-icon">➤</span>
+                </button>
+                <p class="faq-content hidden text-gray-300 py-2">
+                  Yes! If you already have a website that needs a fresh look, I
+                  can redesign it to improve both aesthetics and functionality.
+                </p>
+              </div>
+              <div class="border-b border-gray-500">
+                <button
+                  class="w-full text-left flex justify-between items-center py-3 faq-btn"
+                >
+                  <span>Will my website be mobile-friendly?</span>
+                  <span class="faq-icon">➤</span>
+                </button>
+                <p class="faq-content hidden text-gray-300 py-2">
+                  Absolutely! I ensure all websites are responsive and look
+                  great on desktops, tablets, and mobile devices
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-6 text-gray-300 text-lg">
+            If you have more questions, email me at
+            <a
+              href="mailto:glolarbi1234@gmail.com"
+              class="text-purple-400 hover:underline"
+            >
+              glolarbi1234@gmail.com
+            </a>
+            or fill out the contact form.
+          </p>
+        </div>
+
+        <div class="w-full md:w-1/2 p-8">
+          <h2
+            class="flex items-center justify-center text-3xl font-bold text-black"
+          >
+            Contact Me
+          </h2>
+
+          <form class="mt-4 space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700"
+                >Name *</label
+              >
+              <input
+                type="text"
+                class="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700"
+                >Email *</label
+              >
+              <input
+                type="email"
+                class="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700"
+                >Phone</label
+              >
+              <input
+                type="text"
+                class="w-full p-2 border border-gray-300 rounded"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700"
+                >Message</label
+              >
+              <textarea
+                class="w-full p-2 border border-gray-300 rounded"
+                rows="4"
+              ></textarea>
+            </div>
+
+            <div class="flex items-center justify-between mt-2">
+              <p class="text-xs text-gray-500 leading-tight">
+                By submitting, you agree to our
+                <a
+                  href="./assets/privacy.pdf"
+                  download
+                  class="text-purple-500 hover:underline"
+                  >Privacy Policy</a
+                >.
+              </p>
+              <button
+                class="bg-purple-500 text-white px-4 py-2 rounded shadow-md transition-all duration-300 hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-black text-white py-10 px-6">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+      >
+        <div class="mb-6 md:mb-0 md:w-1/3">
+          <p class="text-gray-400 mt-2 text-sm">
+            Gloria is dedicated to providing a platform where visions for
+            websites are achievable.
+          </p>
+
+          <div class="flex justify-center md:justify-start space-x-4 mt-4">
+            <a
+              href="https://github.com/Miss-Gloria"
+              target="_blank"
+              class="w-8 h-8 flex items-center justify-center bg-purple-500 rounded-full"
+            >
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/glorialarbi"
+              target="_blank"
+              class="w-8 h-8 flex items-center justify-center bg-purple-500 rounded-full"
+            >
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:w-1/3">
+          <h3 class="text-lg font-semibold text-white">Miss-Gee Newsletter</h3>
+          <p class="text-gray-400 text-sm mt-2">
+            Subscribe to our newsletter for updates, insights, and offers.
+          </p>
+
+          <form
+            class="flex mt-4 bg-gray-800 rounded-lg overflow-hidden border border-gray-600"
+          >
+            <input
+              type="email"
+              placeholder="Your Email Here"
+              class="flex-1 px-4 py-2 text-white bg-transparent focus:outline-none placeholder-gray-400"
+            />
+            <button class="bg-purple-500 px-4 py-2 text-black font-semibold">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="text-center text-sm text-gray-400 mt-6 border-t border-gray-700 pt-4"
+      >
+        © Miss-Gee All rights reserved. | Designed by Gloria
+      </div>
+    </footer>
+  </body>
 </html>
