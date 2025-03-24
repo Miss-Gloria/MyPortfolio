@@ -429,63 +429,46 @@
             Contact Me
           </h2>
 
-          <form class="mt-4 space-y-4">
+          <form id="contact-form" class="mt-4 space-y-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700"
-                >Name *</label
-              >
-              <input
-                type="text"
-                class="w-full p-2 border border-gray-300 rounded"
-                required
-              />
+              <label class="block text-sm font-medium text-gray-700">Name *</label>
+              <input type="text" name="name" class="w-full p-2 border border-gray-300 rounded" required />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700"
-                >Email *</label
-              >
-              <input
-                type="email"
-                class="w-full p-2 border border-gray-300 rounded"
-                required
-              />
+              <label class="block text-sm font-medium text-gray-700">Email *</label>
+              <input type="email" name="email" class="w-full p-2 border border-gray-300 rounded" required />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700"
-                >Phone</label
-              >
-              <input
-                type="text"
-                class="w-full p-2 border border-gray-300 rounded"
-              />
+              <label class="block text-sm font-medium text-gray-700">Phone</label>
+              <input type="text" name="phone" class="w-full p-2 border border-gray-300 rounded" />
             </div>
             <div>
-              <label class="block text-sm font-medium text-gray-700"
-                >Message</label
-              >
-              <textarea
-                class="w-full p-2 border border-gray-300 rounded"
-                rows="4"
-              ></textarea>
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea name="message" class="w-full p-2 border border-gray-300 rounded" rows="4"></textarea>
             </div>
-
+          
             <div class="flex items-center justify-between mt-2">
               <p class="text-xs text-gray-500 leading-tight">
                 By submitting, you agree to my
-                <a
-                  href="./assets/privacy.pdf"
-                  download
-                  class="text-purple-500 hover:underline"
-                  >Privacy Policy</a
-                >.
+                <a href="./assets/privacy.pdf" download class="text-purple-500 hover:underline">
+                  Privacy Policy</a>.
               </p>
-              <button
-                class="bg-purple-500 text-white px-4 py-2 rounded shadow-md transition-all duration-300 hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500"
-              >
-                Submit
+              <div class="flex items-center gap-3">
+              <button type="submit" id="submit-button"
+                class="bg-purple-500 text-white px-4 py-2 rounded shadow-md transition-all duration-300 hover:bg-transparent hover:border hover:border-purple-500 hover:text-purple-500 flex items-center gap-2">
+                <span id="button-text">Submit</span>
+                <svg id="button-spinner" class="w-4 h-4 animate-spin hidden text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
               </button>
+
+                <p id="form-message" class="text-sm text-gray-600"></p>
+              </div>
             </div>
           </form>
+
         </div>
       </div>
     </section>

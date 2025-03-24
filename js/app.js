@@ -63,4 +63,66 @@ function toggleText(element) {
       });
     });
   });
+  
+
+
+const form = document.getElementById("contact-form");
+const messageBox = document.getElementById("form-message");
+const submitBtn = document.getElementById("submit-button");
+const buttonText = document.getElementById("button-text");
+const buttonSpinner = document.getElementById("button-spinner");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+// Show spinner & disable button
+  submitBtn.disabled = true;
+  buttonText.textContent = "Sending...";
+  buttonSpinner.classList.remove("hidden");
+
+  const formData = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    message: form.message.value,
+  };
+
+  try {
+    const res = await fetch("https://myportfolio-o7h1.onrender.com/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      messageBox.textContent = "✅ Sent!";
+      messageBox.className = "text-green-600 text-sm";
+      form.reset();
+    } else {
+      messageBox.textContent = "❌ " + (data.errors?.[0] || data.message);
+      messageBox.className = "text-red-600 text-sm";
+    }
+
+  } catch (err) {
+    messageBox.textContent = "Not Sent!";
+    messageBox.className = "text-red-600 text-sm";
+    console.error(err);
+  }
+   // Hide spinner & re-enable button
+  buttonText.textContent = "Submit";
+  buttonSpinner.classList.add("hidden");
+  submitBtn.disabled = false;
+
+  // 🔁 Make the message disappear after 5 seconds
+  setTimeout(() => {
+    messageBox.textContent = "";
+  }, 5000);
+});
+
+
+
 

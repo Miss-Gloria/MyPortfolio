@@ -3,6 +3,6 @@ import { addForm } from "../controllers/portfolio_controller.js";
 
 const portfolioRouter = Router();
 
-portfolioRouter.post('/portfolio', addForm);
+portfolioRouter.post('/messages', addForm);
 
 export default portfolioRouter;

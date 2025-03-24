@@ -25,6 +25,7 @@
     "express": "^4.21.2",
     "joi": "^17.13.3",
     "mongoose": "^8.12.2",
+    "nodemailer": "^6.10.0",
     "normalize-mongoose": "^1.0.0"
   },
   "devDependencies": {
