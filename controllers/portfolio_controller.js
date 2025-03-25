@@ -15,7 +15,7 @@ export const addForm = async(req, res, next) => {
         }
         const message = await PortfolioModel.create(value);
 
-        // 💌 Send confirmation to user
+      
     await sendEmail(
   value.email,
   "Message Recieved",
